@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Replaced oklch with RGB values */
+  --background: rgb(255, 255, 255); /* White */
+  --foreground: rgb(37, 37, 37); /* Dark gray */
+  --card: rgb(255, 255, 255); /* White */
+  --card-foreground: rgb(37, 37, 37); /* Dark gray */
+  --popover: rgb(255, 255, 255); /* White */
+  --popover-foreground: rgb(37, 37, 37); /* Dark gray */
+  --primary: rgb(52, 211, 153); /* Green */
+  --primary-foreground: rgb(255, 255, 255); /* White */
+  --secondary: rgb(251, 191, 36); /* Yellow */
+  --secondary-foreground: rgb(37, 37, 37); /* Dark gray */
+  --muted: rgb(246, 245, 245); /* Light gray */
+  --muted-foreground: rgb(37, 37, 37); /* Dark gray */
+  --accent: rgb(251, 191, 36); /* Yellow */
+  --accent-foreground: rgb(37, 37, 37); /* Dark gray */
+  --destructive: rgb(239, 68, 68); /* Red */
+  --border: rgb(229, 231, 235); /* Light gray */
+  --input: rgb(229, 231, 235); /* Light gray */
+  --ring: rgb(224, 231, 255); /* Light blue */
+  --chart-1: rgb(255, 159, 28); /* Orange */
+  --chart-2: rgb(0, 122, 255); /* Blue */
+  --chart-3: rgb(229, 49, 103); /* Red */
+  --chart-4: rgb(255, 159, 28); /* Orange */
+  --chart-5: rgb(52, 211, 153); /* Green */
+  --sidebar: rgb(255, 255, 255); /* White */
+  --sidebar-foreground: rgb(37, 37, 37); /* Dark gray */
+  --sidebar-primary: rgb(52, 211, 153); /* Green */
+  --sidebar-primary-foreground: rgb(255, 255, 255); /* White */
+  --sidebar-accent: rgb(251, 191, 36); /* Yellow */
+  --sidebar-accent-foreground: rgb(37, 37, 37); /* Dark gray */
+  --sidebar-border: rgb(229, 231, 235); /* Light gray */
+  --sidebar-ring: rgb(224, 231, 255); /* Light blue */
+}
+
+.dark {
+  /* Dark mode theme colors */
+  --background: rgb(37, 37, 37); /* Dark gray */
+  --foreground: rgb(255, 255, 255); /* White */
+  --card: rgb(52, 52, 52); /* Darker gray */
+  --card-foreground: rgb(255, 255, 255); /* White */
+  --popover: rgb(52, 52, 52); /* Darker gray */
+  --popover-foreground: rgb(255, 255, 255); /* White */
+  --primary: rgb(39, 174, 96); /* Dark green */
+  --primary-foreground: rgb(255, 255, 255); /* White */
+  --secondary: rgb(251, 191, 36); /* Yellow */
+  --secondary-foreground: rgb(255, 255, 255); /* White */
+  --muted: rgb(52, 52, 52); /* Darker gray */
+  --muted-foreground: rgb(255, 255, 255); /* White */
+  --accent: rgb(251, 191, 36); /* Yellow */
+  --accent-foreground: rgb(255, 255, 255); /* White */
+  --destructive: rgb(220, 38, 38); /* Red */
+  --border: rgb(44, 44, 46); /* Dark gray */
+  --input: rgb(44, 44, 46); /* Dark gray */
+  --ring: rgb(51, 51, 255); /* Blue */
+  --chart-1: rgb(224, 56, 226); /* Pink */
+  --chart-2: rgb(0, 122, 255); /* Blue */
+  --chart-3: rgb(39, 174, 96); /* Green */
+  --chart-4: rgb(255, 159, 28); /* Orange */
+  --chart-5: rgb(52, 211, 153); /* Green */
+  --sidebar: rgb(39, 39, 39); /* Dark gray */
+  --sidebar-foreground: rgb(255, 255, 255); /* White */
+  --sidebar-primary: rgb(39, 174, 96); /* Dark green */
+  --sidebar-primary-foreground: rgb(255, 255, 255); /* White */
+  --sidebar-accent: rgb(251, 191, 36); /* Yellow */
+  --sidebar-accent-foreground: rgb(255, 255, 255); /* White */
+  --sidebar-border: rgb(44, 44, 46); /* Dark gray */
+  --sidebar-ring: rgb(51, 51, 255); /* Blue */
+}
+
+@layer base {
+  html, body {
+    @apply min-h-screen overflow-x-hidden;
+    overflow-y: auto;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Gradient backgrounds */
+  .gradient {
+    @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600;
+  }
+
+  .gradient-title {
+    @apply bg-gradient-to-b from-gray-400 via-gray-200 to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
+  }
+
+  /* Hero image wrapper for 3D perspective */
+  .hero-image-wrapper {
+  perspective: 1000px;
+}
+
+/* Hero image styles */
+.hero-image {
+  @apply transition-transform duration-300 ease-out will-change-transform;
+  transform-style: preserve-3d;
+  /* Initial transform */
+  transform: rotateX(15deg) scale(1);
+}
+
+/* Scroll state for hero image */
+.hero-image.scrolled {
+  transform: rotateX(0deg) scale(1) translateY(40px);
+}
+
+
+  /* Grid background */
+  .grid-background {
+    @apply fixed top-0 left-0 w-full h-full pointer-events-none -z-10;
+
+    background-image:
+      linear-gradient(to right, rgba(255 255 255 / 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255 255 255 / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Grid background overlay */
+  .grid-background::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full;
+
+    background: radial-gradient(circle, transparent, rgba(0 0 0 / 0.3));
+  }
+}
